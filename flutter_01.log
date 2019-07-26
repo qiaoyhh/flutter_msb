@@ -1,0 +1,82 @@
+Flutter crash report; please file at https://github.com/flutter/flutter/issues.
+
+## command
+
+flutter build aot --suppress-analytics --quiet --target lib/main.dart --target-platform android-arm --output-dir /Users/qiaoyh/Android_Project/Android_Demo/flutter_msb/build/app/intermediates/flutter/release --target-platform android-arm --release
+
+## exception
+
+FileSystemException: FileSystemException: Cannot open file, path = '/Users/qiaoyh/Android_Project/Android_Demo/flutter_msb/build/app/intermediates/flutter/release/frontend_server.d' (OS Error: No such file or directory, errno = 2)
+
+```
+#0      _File.open.<anonymous closure> (dart:io/file_impl.dart:364:9)
+#1      _rootRunUnary (dart:async/zone.dart:1132:38)
+#2      _CustomZone.runUnary (dart:async/zone.dart:1029:19)
+#3      _FutureListener.handleValue (dart:async/future_impl.dart:126:18)
+#4      Future._propagateToListeners.handleValueCallback (dart:async/future_impl.dart:639:45)
+#5      Future._propagateToListeners (dart:async/future_impl.dart:668:32)
+#6      Future._completeWithValue (dart:async/future_impl.dart:483:5)
+#7      Future._asyncComplete.<anonymous closure> (dart:async/future_impl.dart:513:7)
+#8      _rootRun (dart:async/zone.dart:1124:13)
+#9      _CustomZone.run (dart:async/zone.dart:1021:19)
+#10     _CustomZone.bindCallback.<anonymous closure> (dart:async/zone.dart:947:23)
+#11     _microtaskLoop (dart:async/schedule_microtask.dart:41:21)
+#12     _startMicrotaskLoop (dart:async/schedule_microtask.dart:50:5)
+#13     _runPendingImmediateCallback (dart:isolate-patch/isolate_patch.dart:115:13)
+#14     _RawReceivePortImpl._handleMessage (dart:isolate-patch/isolate_patch.dart:172:5)
+```
+
+## flutter doctor
+
+```
+[✓] Flutter (Channel stable, v1.5.4-hotfix.2, on Mac OS X 10.14 18A391, locale zh-Hans-CN)
+    • Flutter version 1.5.4-hotfix.2 at /Users/qiaoyh/Library/flutter
+    • Framework revision 7a4c33425d (3 months ago), 2019-04-29 11:05:24 -0700
+    • Engine revision 52c7a1e849
+    • Dart version 2.3.0 (build 2.3.0-dev.0.5 a1668566e5)
+
+[!] Android toolchain - develop for Android devices (Android SDK version 28.0.3)
+    • Android SDK at /Users/qiaoyh/Library/Android/android-sdk-macosx
+    • Android NDK at /Users/qiaoyh/Library/Android/android-sdk-macosx/ndk-bundle
+    • Platform android-28, build-tools 28.0.3
+    • Java binary at: /Applications/Android Studio.app/Contents/jre/jdk/Contents/Home/bin/java
+    • Java version OpenJDK Runtime Environment (build 1.8.0_152-release-1343-b01)
+    ! Some Android licenses not accepted.  To resolve this, run: flutter doctor --android-licenses
+
+[!] iOS toolchain - develop for iOS devices
+    ✗ Xcode installation is incomplete; a full installation is necessary for iOS development.
+      Download at: https://developer.apple.com/xcode/download/
+      Or install Xcode via the App Store.
+      Once installed, run:
+        sudo xcode-select --switch /Applications/Xcode.app/Contents/Developer
+    ✗ libimobiledevice and ideviceinstaller are not installed. To install with Brew, run:
+        brew update
+        brew install --HEAD usbmuxd
+        brew link usbmuxd
+        brew install --HEAD libimobiledevice
+        brew install ideviceinstaller
+    ✗ ios-deploy not installed. To install:
+        brew install ios-deploy
+    ✗ CocoaPods installed but not initialized.
+        CocoaPods is used to retrieve the iOS platform side's plugin code that responds to your plugin usage on the Dart side.
+        Without resolving iOS dependencies with CocoaPods, plugins will not work on iOS.
+        For more info, see https://flutter.dev/platform-plugins
+      To initialize CocoaPods, run:
+        pod setup
+      once to finalize CocoaPods' installation.
+
+[✓] Android Studio (version 3.4)
+    • Android Studio at /Applications/Android Studio.app/Contents
+    • Flutter plugin version 36.0.1
+    • Dart plugin version 183.6270
+    • Java version OpenJDK Runtime Environment (build 1.8.0_152-release-1343-b01)
+
+[✓] VS Code (version 1.36.1)
+    • VS Code at /Applications/Visual Studio Code.app/Contents
+    • Flutter extension version 3.2.0
+
+[✓] Connected device (1 available)
+    • EML AL00 • VED0219131007482 • android-arm64 • Android 9 (API 28)
+
+! Doctor found issues in 2 categories.
+```
