@@ -1,16 +1,11 @@
-# flutter_msb
+# Flutter版本美术宝一对一
 
-A new Flutter application.
+  ![](https://github.com/qiaoyhh/flutter_msb/tree/master/assets/images/2.0x/img_0.png)
+  ![](https://github.com/qiaoyhh/flutter_msb/tree/master/assets/images/2.0x/img_1.png)
+  ![](https://github.com/qiaoyhh/flutter_msb/tree/master/assets/images/2.0x/img_2.png)
+  ![](https://github.com/qiaoyhh/flutter_msb/tree/master/assets/images/2.0x/img_3.png)
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+  ##  实现的功能
+  * Tab切换、列表、WebView、视频播放器、路由管理等
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.dev/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
