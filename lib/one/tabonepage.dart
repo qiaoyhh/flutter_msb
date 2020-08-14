@@ -1,6 +1,3 @@
-import 'dart:io';
-
-import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_msb/bean/homedatabean.dart';
 import 'package:flutter_msb/one/aboutmsg_listview.dart';
@@ -14,14 +11,13 @@ import 'nearnotice_listview.dart';
 
 class TabOnePage extends StatefulWidget {
   @override
-  State<StatefulWidget> createState() {
-    return new _TabOnePage();
-  }
+  State<StatefulWidget> createState() => new _TabOnePage();
 }
 
-class _TabOnePage extends State<TabOnePage> {
+ class _TabOnePage extends State<TabOnePage> {
   HomeDataBean mData;
   var content;
+
   // 是否需要抓包
   bool mIsProxy = false;
 
@@ -106,7 +102,6 @@ class _TabOnePage extends State<TabOnePage> {
    * async/await 相当于异步
    */
   Future<bool> getHomeData() async {
-
     //=================== 网络库原始写法===================
 //    var dio = new Dio(
 //      new BaseOptions(
@@ -128,12 +123,11 @@ class _TabOnePage extends State<TabOnePage> {
 //      setState(() {});
 //    }
 
-  //=================== 网络库封装写法===================
+    //=================== 网络库封装写法===================
     DioUtil().post('https://onlineapi.meishubao.com/api/indexinfo2',
         errorCallback: (statusCode) {
-          print('Http error code : $statusCode');
-        }
-    ).then((data) {
+      print('Http error code : $statusCode');
+    }).then((data) {
       HomeDataBean homeDataBean = HomeDataBean.fromJson(data);
       if (homeDataBean != null && homeDataBean.status == 0) {
         mData = homeDataBean;
@@ -142,5 +136,4 @@ class _TabOnePage extends State<TabOnePage> {
       }
     });
   }
-
 }

@@ -1,6 +1,8 @@
 import 'dart:convert';
 import 'dart:io';
 
+import 'package:dio/adapter.dart';
+import 'package:dio/dio.dart';
 import 'package:dio/dio.dart';
 
 class Method {
@@ -43,8 +45,8 @@ class DioUtil {
     BaseOptions options = BaseOptions();
     options.connectTimeout = 10 * 1000;
     options.receiveTimeout = 20 * 1000;
-    options.contentType =
-        ContentType.parse('application/x-www-form-urlencoded');
+//    options.contentType =
+//        ContentType.parse('application/x-www-form-urlencoded') as String;
 
     Map<String, dynamic> headers = Map<String, dynamic>();
     headers['Accept'] = 'application/json';
